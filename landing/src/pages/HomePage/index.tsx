@@ -1,8 +1,27 @@
 
-function HomePage(){
+import { AppBar, ContactInfoBar } from "../../components";
+
+function HomePage() {
     return (
-        <div>HomePage</div>
+        <>
+            <ContactInfoBar />
+            <AppBar />
+            <div style={styles.block}>
+                AMENOsdas
+                dsad
+                dsa
+                d
+            </div>
+        </>
     )
 }
+
+const styles = {
+    block: {
+        background: 'red',
+        height: "1900px"
+    }
+} as const;
+
 
 export default HomePage;
