@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../styles.css';
+
 interface AppBarLabelParams {
     to: string;
     name: string;
@@ -25,7 +26,7 @@ export function AppBar() {
     return (
         <>
             <header id='app-bar-header' style={{ ...styles.appBar, ...styles.appBarHeight }}>
-                <div id='app-bar-content' style={styles.content}>
+                <div id='app-bar-content' style={styles.content} className='content-padding'>
                     <h2 id='app-bar-logo-name' style={styles.logoText} className='font-montserrat'>LITERARI</h2>
                     <ul id='app-bar-navigation-lables' style={styles.navigationLable}>
                         {labelParams.map(label => (
@@ -37,24 +38,23 @@ export function AppBar() {
                     </ul>
                 </div>
             </header>
-            <div id='hidden-block' style={{ height: '90px' }}></div>
+            <div id='hidden-block-app-bar' style={styles.appBarHeight}></div>
         </>
     )
 }
 
 const styles = {
     appBarHeight: {
-        height: '90px',
+        height: '5.625em',
     },
     appBar: {
         background: '#FFFFFF',
         display: 'flex',
         position: 'fixed',
-        boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.06)',
+        boxShadow: '0 0.125em 0.625em rgba(0, 0, 0, 0.06)',
         width: '100%'
     },
-    content: {
-        padding: '0 40px 0 40px',
+    content: {        
         justifyContent: 'space-between',
         display: 'flex',
         width: 'inherit',
@@ -63,8 +63,8 @@ const styles = {
     logoText: {
         color: '#666E61',
         fontWeight: 800,
-        fontSize: '32px',
-        lineHeight: '39px',
+        fontSize: '2em',
+        lineHeight: '2.4375em',
         margin: 0
     },
     navigationLable: {
@@ -75,9 +75,9 @@ const styles = {
     navigationTag: {
         color: '#666E61',
         fontWeight: 600,
-        fontSize: '18px',
-        lineHeight: '27px',
-        margin: '0 25px 0 0',
+        fontSize: '1.125em',
+        lineHeight: '1.6875em',
+        margin: '0 1.5625em 0 0',
     },
     quoteButton: {
         background: '#666E61',
@@ -85,8 +85,8 @@ const styles = {
 
         color: '#F9F6F2',
         fontWeight: 600,
-        fontSize: '16px',
-        lineHeight: '24px',
-        padding: '6px 32px'
+        fontSize: '1em',
+        lineHeight: '1.5em',
+        padding: '0.375em 2em'
     }
 } as const;
