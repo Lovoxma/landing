@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import '../styles.css';
 
 interface AppBarLabelParams {
@@ -30,9 +29,7 @@ export function AppBar() {
                     <h2 id='app-bar-logo-name' style={styles.logoText} className='font-montserrat'>LITERARI</h2>
                     <ul id='app-bar-navigation-lables' style={styles.navigationLable}>
                         {labelParams.map(label => (
-                            <Link key={label.name.toLocaleLowerCase()} to={label.to} style={{ textDecoration: 'none' }} >
-                                <h4 id={`${label.name.toLocaleLowerCase()}-navigation`} style={styles.navigationTag} className='font-montserrat'>{label.name}</h4>
-                            </Link>
+                            <h4 id={`${label.name.toLocaleLowerCase()}-navigation`} style={styles.navigationTag} className='font-montserrat'>{label.name}</h4>
                         ))}
                         <button id='quote-button' style={styles.quoteButton} className='font-montserrat'>Get a quote</button>
                     </ul>
@@ -52,9 +49,10 @@ const styles = {
         display: 'flex',
         position: 'fixed',
         boxShadow: '0 0.125em 0.625em rgba(0, 0, 0, 0.06)',
-        width: '100%'
+        width: '100%',
+        zIndex: 100
     },
-    content: {        
+    content: {
         justifyContent: 'space-between',
         display: 'flex',
         width: 'inherit',
