@@ -1,19 +1,16 @@
 import './App.css';
 
-import { AppBar, ContactInfoSection, AboutUsSection, IntroSection } from "./components";
+import { AppBar, ContactInfoSection, AboutUsSection, IntroSection, WhatsIncludedSection, OurLibrariesSection, GetAQuoteSection } from "./components";
 function App() {
   return (
     <>
       <AppBar />
       <IntroSection />
       <AboutUsSection />
+      <WhatsIncludedSection />
+      <OurLibrariesSection />
+      <GetAQuoteSection />
       <ContactInfoSection />
-      {/* <div style={styles.block}>
-                AMENOsdas
-                dsad
-                dsa
-                d
-            </div> */}
     </>
   );
 }

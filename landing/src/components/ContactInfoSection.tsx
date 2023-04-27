@@ -1,30 +1,36 @@
 import '../styles.css';
-import { SettingsIcon } from './CustomIcons';
 
 export function ContactInfoSection() {
+    const social_media_data = [
+        {
+            name: 'Facebook',
+            url: 'https://www.facebook.com/literari.md',
+        },
+        {
+            name: 'Instagram',
+            url: 'https://www.instagram.com/literari.md/',
+        },
+        {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/company/literari/',
+        }
+    ]
     return (
         <section id='info-section-background' style={styles.sectionBackground}>
             <div id='info-section' style={styles.section}>
-                <h4 id='info-section-logo' style={styles.logoText} className='font-montserrat'>LITERARI</h4>
+                <p id='info-section-logo' style={styles.logoText} className='font-montserrat'>LITERARI</p>
                 <div id='info-section-contacts-card'>
-                    <h4 id='info-section-contacts-text' style={styles.headerText} className='font-montserrat'>SAY HELLO</h4>
-                    <h6 id='info-section-email' style={styles.contacts} className='font-inter'>contact@literari.md</h6>
-                    <h6 id='info-section-phone' style={styles.contacts} className='font-inter'>+373 603 91 882</h6>
+                    <p id='info-section-contacts-text' style={styles.headerText} className='font-montserrat'>SAY HELLO</p>
+                    <p id='info-section-email' style={styles.contacts} className='font-inter'>contact@literari.md</p>
+                    <p id='info-section-phone' style={styles.contacts} className='font-inter'>+373 603 91 882</p>
                 </div>
                 <div id='info-section-social-media-card'>
-                    <h4 id='info-section-social-media' style={styles.headerText} className='font-montserrat'>FIND US HERE</h4>
-                    <a id='info-section-facebook-link' href='https://www.facebook.com/literari.md' target='_blank' style={styles.socialMediaComponent}>
-                        <SettingsIcon id='info-section-facebook-icon' />
-                        <h6 id='info-section-facebook-name' style={styles.contacts} className='font-inter'>Facebook</h6>
-                    </a>
-                    <a id='info-section-instagram-link' href='https://www.instagram.com/literari.md/' target='_blank' style={styles.socialMediaComponent}>
-                        <SettingsIcon id='info-section-instagram-icon' />
-                        <h6 id='info-section-instagram-name' style={styles.contacts} className='font-inter'>Instagram</h6>
-                    </a>
-                    <a id='info-section-linkedin-link' href='https://www.linkedin.com/company/literari/' target='_blank' style={styles.socialMediaComponent}>
-                        <SettingsIcon id='info-section-linkedin-logo' />
-                        <h6 id='info-section-linkedin-name' style={styles.contacts} className='font-inter'>LinkedIn</h6>
-                    </a>
+                    <p id='info-section-social-media' style={styles.headerText} className='font-montserrat'>FIND US HERE</p>
+                    {social_media_data?.map(data => (
+                        <a id={`info-section-${data.name.toLowerCase()}-link`} href={data.url} target='_blank' style={styles.socialMediaComponent}>
+                            <p id={`info-section-${data.name.toLowerCase()}-name`} style={styles.contacts} className='font-inter'>{data.name}</p>
+                        </a>
+                    ))}
                 </div>
             </div>
         </section>

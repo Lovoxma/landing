@@ -2,13 +2,13 @@ import '../styles.css';
 
 export function AboutUsSection() {
     return (
-        <section id='about-us-section' style={styles.sectionBackground}>
-            <div style={styles.section}>
-                <h4 id='about-us-text' style={styles.aboutUsText} className='font-montserrat'>About us</h4>
-                <h2 id='about-us-motto' style={styles.mottoText} className='font-inter'>We create your environment at the office
+        <section id='about-us-section-background' style={styles.sectionBackground}>
+            <div id='about-us-section' style={styles.section}>
+                <p id='about-us-text' style={styles.headerText} className='font-montserrat'>ABOUT US</p>
+                <p id='about-us-motto' style={styles.mottoText} className='font-inter'>We create your environment at the office
                     <br />place – smart, comfy and employee
-                    <br />growth-oriented.</h2>
-                <h4 id='about-us-logo' style={styles.logoText} className='font-inter'>– LITERARI team –</h4>
+                    <br />growth-oriented.</p>
+                <p id='about-us-logo' style={styles.logoText} className='font-inter'>– LITERARI team –</p>
             </div>
         </section>
     )
@@ -25,7 +25,7 @@ const styles = {
         width: '100%',
         textAlign: 'center'
     },
-    aboutUsText: {
+    headerText: {
         fontWeight: 700,
         fontSize: '18px',
         lineHeight: '54px',

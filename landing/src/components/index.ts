@@ -4,3 +4,6 @@ export * from './AbousUsSection';
 export * from './ContactInfoSection';
 export * from './CustomIcons';
 export * from './IntroSection';
+export * from './WhatsIncludedSection';
+export * from './OurLibrariesSection';
+export * from './GetAQuoteSection'
