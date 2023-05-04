@@ -1,17 +1,28 @@
 import '../styles.css';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
-type ContactInfo = {
-    email: string,
-    contactNumber: string
-}
 export function GetAQuoteSection() {
-    const [contactInfo, setContactInfo] = useState<ContactInfo>({ email: '', contactNumber: '' });
+    const [contactInfo, setContactInfo] = useState({ email: '', contactNumber: '' });
 
-    // console.log(contactInfo)
-    function SendEmail() {
-        // window.emai
-    }
+    const form = useRef<HTMLFormElement>(null);
+
+    const sendEmail = (event) => {
+        event.preventDefault();
+
+        emailjs.sendForm(
+            'service_qvrh15g',
+            'template_fscqyzf',
+            form.current as string | HTMLFormElement,
+            'CUQG33hWpBC6gTfja')
+            .then(() => {
+                alert('Contactele voastre au fost receptionate, va multumim')
+            }, (error) => {
+                alert('Ne pare rau, incercati mai tarziu')
+                console.log(error.text);
+            });
+        setContactInfo({ email: '', contactNumber: '' })
+    };
 
     return (
         <section id='get-a-quote-section-background' style={styles.sectionBackground}>
@@ -19,21 +30,33 @@ export function GetAQuoteSection() {
                 <p id='get-a-quote-text' style={styles.headerText} className='font-montserrat'>GET A QUOTE</p>
                 <p id='get-a-quote-description' style={styles.description} className='font-inter'>Fill in your contact details and we’ll get back to you to discuss the best offer you can get!</p>
                 <div>
-                    <input
-                        id='get-a-quote-email-input'
-                        style={styles.inputField}
-                        className='font-montserrat'
-                        placeholder='E-mail'
-                        onChange={event => setContactInfo({ ...contactInfo, email: event.target.value })}
-                    />
-                    <input
-                        id='get-a-quote-contact-number-input'
-                        style={styles.inputField}
-                        className='font-montserrat'
-                        placeholder='Contact number'
-                        onChange={event => setContactInfo({ ...contactInfo, contactNumber: event.target.value })}
-                    />
-                    <button id='get-a-quote-buton' style={styles.button} className='font-montserrat'>Get the offer</button>
+                    <form ref={form} onSubmit={sendEmail}>
+                        <input
+                            id='get-a-quote-email-input'
+                            type='email'
+                            name='email'
+                            value={contactInfo.email}
+                            style={styles.inputField}
+                            className='font-montserrat'
+                            placeholder='E-mail'
+                            onChange={event => setContactInfo({ ...contactInfo, email: event.target.value })}
+                        />
+                        <input
+                            id='get-a-quote-contact-number-input'
+                            type='text'
+                            name='contact_number'
+                            value={contactInfo.contactNumber}
+                            style={styles.inputField}
+                            className='font-montserrat'
+                            placeholder='Contact number'
+                            onChange={event => setContactInfo({ ...contactInfo, contactNumber: event.target.value })}
+                        />
+                        <button
+                            id='get-a-quote-buton'
+                            type="submit"
+                            style={styles.button}
+                            className='font-montserrat'>Get the offer</button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -89,10 +112,11 @@ const styles = {
     button: {
         width: '201px',
         height: '48px',
-                
+
         background: '#666E61',
         borderRadius: '50px',
         border: 0,
+        cursor: 'pointer',
 
         fontWeight: 600,
         fontSize: '16px',

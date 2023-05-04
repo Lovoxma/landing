@@ -2,15 +2,21 @@ import '../styles.css';
 import { BannerImage } from '../assets';
 
 export function IntroSection() {
+
+    const handleClickScrollToSection = (sectionId: string) => {
+        const anchor = document.querySelector(sectionId)
+        anchor?.scrollIntoView({ behavior: 'smooth', block: 'center'})
+    }
+
     return (
-        <section id='intro-section' style={styles.sectionBackground}>
+        <section id='intro-section-background' style={styles.sectionBackground}>
             <div id='intro-card' style={styles.card}>
                 <div id='intro-card-content' style={styles.content}>
                     <p id='intro-greetings-text' style={styles.greetingsText} className='font-montserrat'>Time to meet your</p>
                     <p id='intro-office-text' style={styles.officeText} className='font-montserrat'>CUSTOM OFFICE LIBRARY</p>
                     <p id='intro-description-text' style={styles.descriptionText} className='font-inter'>Flexible and fully customed – the best library
                         <br />your office can have!</p>
-                    <button id='intro-button' style={styles.button} className='font-montserrat'>Contact us</button>
+                    <button id='intro-button' onClick={() => handleClickScrollToSection('#get-a-quote-section-background')} style={styles.button} className='font-montserrat'>Contact us</button>
                 </div>
             </div>
             <img id='intro-librabry-image' style={styles.image} src={BannerImage.default} alt='' />

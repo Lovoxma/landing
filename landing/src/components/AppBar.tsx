@@ -34,7 +34,7 @@ export function AppBar() {
         <>
             <header id='app-bar-header' style={{ ...styles.appBar, ...styles.appBarHeight }}>
                 <div id='app-bar-content' style={styles.content} className='content-padding'>
-                    <h2 id='app-bar-logo-name' style={styles.logoText} className='font-montserrat'>LITERARI</h2>
+                    <p id='app-bar-logo-name' onClick={() => handleClickScrollToSection('#intro-section-background')} style={styles.logoText} className='font-montserrat'>LITERARI</p>
                     <ul id='app-bar-navigation-lables' style={styles.navigationLable}>
                         {labelParams.map(label => (
                             <p id={`${label.name.toLocaleLowerCase()}-navigation`} onClick={() => handleClickScrollToSection(label.sectionId)} style={styles.navigationTag} className='font-montserrat'>{label.name}</p>
@@ -71,7 +71,8 @@ const styles = {
         fontWeight: 800,
         fontSize: '2em',
         lineHeight: '2.4375em',
-        margin: 0
+        margin: 0,
+        cursor: 'pointer'
     },
     navigationLable: {
         display: 'flex',

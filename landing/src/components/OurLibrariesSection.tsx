@@ -2,7 +2,6 @@ import '../styles.css';
 import { PurcariLibraryImage1, PurcariLibraryImage2, PurcariLibraryImage3 } from '../assets';
 
 export function OurLibrariesSection() {
-    console.log(PurcariLibraryImage1)
     return (
         <section id='our-libraries-section-background' style={styles.sectionBackground}>
             <div id='our-libraries-section' style={styles.section}>
