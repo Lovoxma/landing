@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/landing/static/css/main.1273b1e2.css",
-    "main.js": "/landing/static/js/main.e1f18a75.js",
-    "static/media/baner_image.jpg": "/landing/static/media/baner_image.d776461e858ca5229aa6.jpg",
-    "static/media/purcari_library_image_3.jpg": "/landing/static/media/purcari_library_image_3.23b8dfa0fce6bd5b00f9.jpg",
-    "static/media/purcari_library_image_1.jpg": "/landing/static/media/purcari_library_image_1.8649b0166f65129ab900.jpg",
-    "static/media/purcari_library_image_2.jpg": "/landing/static/media/purcari_library_image_2.dd200d5288da5055f888.jpg",
-    "static/media/ilustration_calendar.png": "/landing/static/media/ilustration_calendar.458851eef48567ae8112.png",
-    "static/media/ilustration_planet.png": "/landing/static/media/ilustration_planet.dc70c9f5fca839fcbaa2.png",
-    "static/media/ilustration_book.png": "/landing/static/media/ilustration_book.58a21893e93d9d77b251.png",
-    "static/media/ilustration_hands.png": "/landing/static/media/ilustration_hands.edf63fcf8021f9de809f.png",
-    "static/media/ilustration_star.png": "/landing/static/media/ilustration_star.e5d677bbe15d9e0d8095.png",
-    "static/media/ilustration_infinite.png": "/landing/static/media/ilustration_infinite.fd4c0c1a54cdb6b9645c.png",
-    "index.html": "/landing/index.html",
-    "main.1273b1e2.css.map": "/landing/static/css/main.1273b1e2.css.map",
-    "main.e1f18a75.js.map": "/landing/static/js/main.e1f18a75.js.map"
+    "main.css": "/static/css/main.1273b1e2.css",
+    "main.js": "/static/js/main.f966c728.js",
+    "static/media/baner_image.jpg": "/static/media/baner_image.d776461e858ca5229aa6.jpg",
+    "static/media/purcari_library_image_3.jpg": "/static/media/purcari_library_image_3.23b8dfa0fce6bd5b00f9.jpg",
+    "static/media/purcari_library_image_1.jpg": "/static/media/purcari_library_image_1.8649b0166f65129ab900.jpg",
+    "static/media/purcari_library_image_2.jpg": "/static/media/purcari_library_image_2.dd200d5288da5055f888.jpg",
+    "static/media/ilustration_calendar.png": "/static/media/ilustration_calendar.458851eef48567ae8112.png",
+    "static/media/ilustration_planet.png": "/static/media/ilustration_planet.dc70c9f5fca839fcbaa2.png",
+    "static/media/ilustration_book.png": "/static/media/ilustration_book.58a21893e93d9d77b251.png",
+    "static/media/ilustration_hands.png": "/static/media/ilustration_hands.edf63fcf8021f9de809f.png",
+    "static/media/ilustration_star.png": "/static/media/ilustration_star.e5d677bbe15d9e0d8095.png",
+    "static/media/ilustration_infinite.png": "/static/media/ilustration_infinite.fd4c0c1a54cdb6b9645c.png",
+    "index.html": "/index.html",
+    "main.1273b1e2.css.map": "/static/css/main.1273b1e2.css.map",
+    "main.f966c728.js.map": "/static/js/main.f966c728.js.map"
   },
   "entrypoints": [
     "static/css/main.1273b1e2.css",
-    "static/js/main.e1f18a75.js"
+    "static/js/main.f966c728.js"
   ]
 }
